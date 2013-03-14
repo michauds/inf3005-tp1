@@ -14,6 +14,7 @@ window.tp1 = window.tp1 || { };
 /**
 * main object and utilities methods
 */
+
 tp1 = {
 
     /**
@@ -28,7 +29,7 @@ tp1 = {
 tp1.chandail= {
 	
 	appliqueCouleur: function(color){
-		alert($(color).text());
+		
 		
 		$(".test").css("background-color",color)	
 	}
