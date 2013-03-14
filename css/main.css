@@ -25,10 +25,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .farbtastic .color, .farbtastic .overlay { top: 47px; left: 47px; width: 101px; height: 101px; }
 
-.farbtastic .wheel { background: url(wheel.png) no-repeat; width: 195px; height: 195px; }
+.farbtastic .wheel { background: url(../images/farbtastic/wheel.png) no-repeat; width: 195px; height: 195px; }
 
-.farbtastic .overlay { background: url(mask.png) no-repeat; }
+.farbtastic .overlay { background: url(../images/farbtastic/mask.png) no-repeat; }
 
-.farbtastic .marker { width: 17px; height: 17px; margin: -8px 0 0 -8px; overflow: hidden; background: url(marker.png) no-repeat; }
-
-.test { text-align: left; text-decoration: overline; }
+.farbtastic .marker { width: 17px; height: 17px; margin: -8px 0 0 -8px; overflow: hidden; background: url(../images/farbtastic/marker.png) no-repeat; }
