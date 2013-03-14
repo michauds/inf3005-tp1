@@ -23,7 +23,7 @@
 			<div class="mod-content">
 				<figure class="mod-tshirt mod-col1">
 					<figcaption class="typo-h1">Vue du modèle de chandail</figcaption>
-					<div id="color" style="width: 300px; height: 300px; background-color: #000000;"></div>
+					<div id="color" style="width: 300px; height: 300px; background-color: #000000; border: 1px solid #ccc;"></div>
 					<!-- img src="img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228" -->
 				</figure>
 				<article class="mod-col2">

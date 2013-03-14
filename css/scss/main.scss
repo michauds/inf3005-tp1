@@ -44,7 +44,7 @@ $orange : orange;
 
 //Principaux modules
 
-body { background-color: $bgColor; }
+body { background-color: $bgColor; font-family: $verdanaFont; font-size: 0.8em; }
 
 
 *::selection { color:$white !important; background-color: $orange !important; }
