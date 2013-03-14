@@ -33,9 +33,6 @@ tp1.chandail= {
 		
 		$(".test").css("background-color",color)	
 	}
-	
-	
-	
 };
 
 $(document).ready(function() {

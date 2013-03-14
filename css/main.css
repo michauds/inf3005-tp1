@@ -30,3 +30,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .farbtastic .overlay { background: url(../images/farbtastic/mask.png) no-repeat; }
 
 .farbtastic .marker { width: 17px; height: 17px; margin: -8px 0 0 -8px; overflow: hidden; background: url(../images/farbtastic/marker.png) no-repeat; }
+
+.mod-wrapper { width: 1300px; }
+
+.typo-main-title { font-size: 2em; font-family: "Gravitas One", cursive; }
+
+.typo-h1 { font-size: 1em; font-weight: bold; margin-bottom: 1em; display: block; }
+
+.typo-h2 { font-size: 0.8em; font-weight: bold; margin-bottom: 1em; display: block; }
+
+body { background-color: #cccccc; }
+
+*::selection { color: white !important; background-color: orange !important; }
+
+*::-moz-selection { color: white !important; background-color: orange !important; }
+
+.mod-wrapper { margin: 0 auto; padding: 20px 50px; background-color: white; -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */ -moz-box-sizing: border-box; /* Firefox, other Gecko */ box-sizing: border-box; /* Opera/IE 8+ */ }
+
+.mod-header { padding: 20px 0px; }
+
+.mod-col1 { width: 30%; display: inline-block; vertical-align: top; }
+
+.mod-col2 { width: 69%; display: inline-block; border: 1px solid #cccccc; margin-top: 30px; vertical-align: top; padding: 20px; -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */ -moz-box-sizing: border-box; /* Firefox, other Gecko */ box-sizing: border-box; /* Opera/IE 8+ */ }
