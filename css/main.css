@@ -60,7 +60,8 @@ body { background-color: #cccccc; }
 @media (min-width: 768px) and (max-width: 979px) { .mod-wrapper { width: 800px; }
   .mod-col2 { width: 50%; margin-left: 115px; } }
 /* Landscape phone to portrait tablet */
-@media (max-width: 767px) { .mod-wrapper { width: 400px; }
+@media (max-width: 767px) { .mod-wrapper { width: 500px; }
+  #color { margin: 0 auto; }
   .mod-col1, .mod-col2 { width: 100%; }
   .mod-col2 { margin-left: 0; }
   .typo-main-title { font-size: 1.5em; } }

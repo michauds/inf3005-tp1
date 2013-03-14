@@ -84,7 +84,8 @@ body { background-color: $bgColor; }
 			width: 1024px;
 		
 		}
-		.mod-col2  { width: 60%;margin-left: 60px; }
+		
+	.mod-col2  { width: 60%;margin-left: 60px; }
  }
 
 /* Portrait tablet to landscape and desktop */
@@ -93,8 +94,7 @@ body { background-color: $bgColor; }
 	
 	.mod-wrapper { 
 		
-			width: 800px;
-			
+			width: 800px;	
 	}
 	.mod-col2  { width: 50%; margin-left: 115px;}
 }
@@ -104,10 +104,9 @@ body { background-color: $bgColor; }
 	
 	.mod-wrapper { 
 		
-			width: 400px;
-			
+		width: 500px;	
 	}
-	
+	#color { margin: 0 auto; }
 	.mod-col1, .mod-col2  { width: 100%;}
 	.mod-col2  { margin-left: 0; }
 	.typo-main-title { font-size: 1.5em; }
