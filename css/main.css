@@ -31,8 +31,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .farbtastic .marker { width: 17px; height: 17px; margin: -8px 0 0 -8px; overflow: hidden; background: url(../images/farbtastic/marker.png) no-repeat; }
 
-.mod-wrapper { width: 1300px; }
-
 .typo-main-title { font-size: 2em; font-family: "Gravitas One", cursive; }
 
 .typo-h1 { font-size: 1em; font-weight: bold; margin-bottom: 1em; display: block; }
@@ -51,4 +49,23 @@ body { background-color: #cccccc; }
 
 .mod-col1 { width: 30%; display: inline-block; vertical-align: top; }
 
-.mod-col2 { width: 69%; display: inline-block; border: 1px solid #cccccc; margin-top: 30px; vertical-align: top; padding: 20px; -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */ -moz-box-sizing: border-box; /* Firefox, other Gecko */ box-sizing: border-box; /* Opera/IE 8+ */ }
+.mod-col2 { width: 65%; display: inline-block; border: 1px solid #cccccc; margin-left: 10px; margin-top: 30px; vertical-align: top; padding: 20px; -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */ -moz-box-sizing: border-box; /* Firefox, other Gecko */ box-sizing: border-box; /* Opera/IE 8+ */ }
+
+/* Responsive */
+/* Large desktop */
+@media (min-width: 1200px) { .mod-wrapper { width: 1200px; } }
+@media (min-width: 980px) and (max-width: 1199px) { .mod-wrapper { width: 1024px; }
+  .mod-col2 { width: 60%; margin-left: 60px; } }
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { .mod-wrapper { width: 800px; }
+  .mod-col2 { width: 50%; margin-left: 115px; } }
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { .mod-wrapper { width: 400px; }
+  .mod-col1, .mod-col2 { width: 100%; }
+  .mod-col2 { margin-left: 0; }
+  .typo-main-title { font-size: 1.5em; } }
+/* Landscape phones and down */
+@media (max-width: 480px) { .mod-wrapper { width: 400px; }
+  .mod-col1, .mod-col2 { width: 100%; }
+  .mod-col2 { margin-left: 0; }
+  .typo-main-title { font-size: 1.5em; } }

@@ -54,7 +54,6 @@ body { background-color: $bgColor; }
 	
 	margin: 0 auto;
 	padding: 20px 50px;
-	@extend %width-desktop;
 	background-color: $white;
 	@include box-sizing; 
 	
@@ -64,4 +63,67 @@ body { background-color: $bgColor; }
 
 .mod-tshirt { }
 .mod-col1 { width: 30%; display: inline-block;  vertical-align: top;}
-.mod-col2 { width: 69%; display: inline-block; border: 1px solid $bgColor; margin-top: 30px; vertical-align: top; padding: 20px; @include box-sizing; }
+.mod-col2 { width: 65%; display: inline-block; border: 1px solid $bgColor; margin-left: 10px; margin-top: 30px; vertical-align: top; padding: 20px; @include box-sizing; }
+
+/* Responsive */
+
+/* Large desktop */
+@media (min-width: 1200px)  { 
+	
+	.mod-wrapper { 
+		
+			width: 1200px;
+		
+		}
+ }
+ 
+@media (min-width: 980px) and (max-width:1199px) { 
+
+	.mod-wrapper { 
+
+			width: 1024px;
+		
+		}
+		.mod-col2  { width: 60%;margin-left: 60px; }
+ }
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+	
+	
+	.mod-wrapper { 
+		
+			width: 800px;
+			
+	}
+	.mod-col2  { width: 50%; margin-left: 115px;}
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+	
+	.mod-wrapper { 
+		
+			width: 400px;
+			
+	}
+	
+	.mod-col1, .mod-col2  { width: 100%;}
+	.mod-col2  { margin-left: 0; }
+	.typo-main-title { font-size: 1.5em; }
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+	
+	.mod-wrapper { 
+		
+			width: 400px;
+			
+		}
+	.mod-col1, .mod-col2  { width: 100%;}
+	.mod-col2  { margin-left: 0; }
+	.typo-main-title { font-size: 1.5em; }
+}
+
+
