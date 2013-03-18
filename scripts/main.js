@@ -22,18 +22,95 @@ tp1 = {
     */
     init: function () {
 		
-		 $('#colorpicker').farbtastic('#color',tp1.chandail.appliqueCouleur(color));
+		$('#colorpicker').farbtastic('#colorTshirt');
+		tp1.ajaxConfiguration.init();
     }
 }
 
 tp1.chandail= {
 	
-	appliqueCouleur: function(color){
+	/*appliqueCouleur: function(color){
 		
+		console.log($(color).css("background-color"));
+		var test = $(color).css("background-color");
+		console.log(typeof test);
+		$("#colorTshirt").css("background-color",test);
+		/*$('#colorpicker').farbtastic().color();
+		console.log($("#color").css("background-color"));
 		
-		$(".test").css("background-color",color)	
-	}
+		var bgColor = $("#color").css("background-color");
+		console.log(bgColor);
+	
+	}*/
 };
+
+
+tp1.ajaxConfiguration = {
+	
+	
+	init: function(){
+		
+		tp1.ajaxConfiguration.formSubmit();
+	},
+	
+	formSubmit: function(){
+		
+		$(".form-tshirt").submit(function(event) {
+			
+			tp1.ajaxConfiguration.obtenirValeurs();
+			//tp1.ajaxConfiguration.accesDonnes($(this));
+			event.preventDefault();
+		});	
+	},
+
+	accesDonnes: function(form){
+		
+			var valeurs = $(form).serialize();
+			
+			$.ajax({
+				
+			      url: "../inf3005-tp1/produit.php",
+			      type: "post",
+			      data: valeurs,
+			      success: function(data){
+			          //alert("success");
+			         //$("#result").html('submitted successfully');
+					console.log(data);
+					
+			      },
+			      error:function(){
+				
+			          //alert("failure");
+			          //$("#result").html('there is error while submit');
+			      }   
+			    });
+	},
+	
+	obtenirValeurs: function(){
+		
+		var grandeur= $("#taille").val(),
+			texte=$("#texteChandail").val(),
+			couleur=$("#colorTshirt").css("background-color"),
+			tailleCaractere=$("#tailleTypo").val(),
+			police= $("[name=police]:checked").val(),
+			quantite= $("#quantite").val(),
+			tissu= $("[name=tissu]:checked").val(),
+			nom= $("#nom").val(),
+			prenom= $("#prenom").val(),
+			telephone= $("#telephone").val(),
+			courriel= $("#courriel").val(),
+			adresse= $("#adresse").val(),
+			valeurs= { grandeur:grandeur,texte:texte,couleur:couleur,tailleCaractere:tailleCaractere,police:police, quantite: quantite, tissu:tissu,nom:nom, prenom:prenom,telephone:telephone, courriel:courriel,adresse :adresse};
+			//alert(police);
+		 	console.log(valeurs);
+
+		//return valeurs;
+	}
+	
+	
+
+};
+
 
 $(document).ready(function() {
 	
