@@ -27,7 +27,7 @@
 					
 					<div id="colorTshirt" style="width: 300px; height: 300px; background-color: #000000;">
 						<div class="zone-edition"></div>
-						<img src="images/long-sleeve.png" alt="The Pulpit Rock" width="300" height="300" style="display:block;"  >
+						<img class="chandail" src="images/long-sleeve.png" alt="The Pulpit Rock" width="300" height="300" style="display:block;"  >
 					</div>
 				</figure>
 				<article class="mod-col2">
@@ -54,6 +54,16 @@
 										<label for="tailleTypo">Taille de la police de caractère</label>
 										<input id="tailleTypo" type="range" min="12" max="18" value="12"/>
 								</div>
+								<div class="s-row ico-shirt">
+										<div class="selected" data-type="long">
+											<h1>Manches Longues</h1>
+											<img src="images/ico-long-sleeve.png" alt="ico-long"/>
+										</div>
+										<div data-type="court">
+											<h1>Manches Courtes</h1>
+											<img src="images/ico-short-sleeve.png" alt="ico-long"/>
+										</div>
+								</div>
 								
 							</div><!--// sub col -->
 							<div class="no-col">
@@ -78,7 +88,7 @@
 								<label for="polyester">polyester</label>
 								<input type="radio" name="tissu" value="polyester" id="polyester"/>
 							</fieldset>
-								<fieldset class="form-info-perso">
+							<fieldset class="form-info-perso">
 								<legend>Informations personnelles</legend>
 								<div class="s-row">
 									<input id="prenom" type="text" placeholder="Prenom" />

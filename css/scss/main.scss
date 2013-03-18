@@ -76,6 +76,11 @@ body { background-color: $bgColor; font-family: $verdanaFont; font-size: 0.8em; 
 .mod-header { padding: 20px 0px;}
 
 .mod-tshirt { }
+.ico-shirt div{ display: inline-block; width: 43%; padding: 5px;
+		&:hover { cursor: pointer; }
+		&.selected { border: solid 1px red;}
+	 }
+	
 .mod-col1 { width: 30%; display: inline-block;  vertical-align: top;}
 .mod-col2 { 
 
@@ -83,7 +88,7 @@ body { background-color: $bgColor; font-family: $verdanaFont; font-size: 0.8em; 
 		.sub-col-1  { 
 				display: inline-block;
 				width: 50%;
-				textarea { width: 100%; height: 50px; text-align: left; }
+				textarea { width: 87%; height: 50px; text-align: left; }
 				
 			}
 		.no-col {
@@ -95,7 +100,7 @@ body { background-color: $bgColor; font-family: $verdanaFont; font-size: 0.8em; 
 				}
 			.form-info-perso {
 				
-				input[type=text] { width: 100%; padding: 7px 5px;}
+				input[type=text] { width: 87%; padding: 7px 5px;}
 				
 			}
 			
@@ -180,7 +185,14 @@ form {
 		}
 	.mod-col1, .mod-col2  { width: 100%;}
 	.mod-col2  { margin-left: 0; 
-		.sub-col-1 { width: 100%;}
+		.sub-col-1 { width: 100%;
+			
+			
+			}
+			.no-col {
+				
+					fieldset{ label{ font-size: 0.9em;}}
+			}
 		}
 	.typo-main-title { font-size: 1.5em; }
 }

@@ -26,6 +26,7 @@ tp1 = {
 		tp1.ajaxConfiguration.init();
 		tp1.chandail.editText();
 		tp1.chandail.setFontSize();
+		tp1.chandail.chandailClickEvent();
     }
 }
 
@@ -116,6 +117,23 @@ tp1.chandail= {
 			
 			$(".font-size").css({"font-size":newSize+"px", "line-height": newSize+"px"});	
 		});	
+		
+	},
+	
+	chandailClickEvent: function(){
+		
+		$(".ico-shirt div").click(function(){
+
+			$(".ico-shirt div").removeClass("selected");
+			$(this).addClass("selected");
+			if($(this).attr("data-type") == "long"){
+				
+				$(".chandail").attr("src","images/long-sleeve.png");
+			}else{
+				
+				$(".chandail").attr("src","images/short-sleeve.png");
+			}
+		});
 		
 	}
 };
