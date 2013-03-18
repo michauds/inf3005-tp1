@@ -24,11 +24,14 @@ tp1 = {
 		
 		$('#colorpicker').farbtastic('#colorTshirt');
 		tp1.ajaxConfiguration.init();
+		tp1.chandail.editText();
+		tp1.chandail.setFontSize();
     }
 }
 
 tp1.chandail= {
 	
+
 	/*appliqueCouleur: function(color){
 		
 		console.log($(color).css("background-color"));
@@ -42,6 +45,79 @@ tp1.chandail= {
 		console.log(bgColor);
 	
 	}*/
+	
+	editText: function(){
+		
+		$("textarea").focus(function(){
+			
+			$(".zone-edition").css({"background-color": "black","color":"white", "border":"1px solid #ffffff"});
+			
+		});
+		
+		$("textarea").blur(function(){
+				
+				if($("#colorTshirt").css("background-color") == "rgb(0, 0, 0)"){
+					
+					$(".zone-edition").css({"background-color": "none","color":"white", "border":"none"});
+					
+				}else{
+					
+					$(".zone-edition").css({"background-color": "transparent","color":"black", "border":"none"});
+					
+				}
+		});
+		
+		$("textarea").keyup(function(){
+			
+			var stop= false
+			var text = $(this).val();
+			$(".zone-edition").text(text);
+			
+			var divheight = $(".zone-edition").height(); 
+			var lineheight = $(".zone-edition").css('line-height').replace("px","");
+			console.log(Math.round(divheight/parseInt(lineheight)));
+			
+			/*var arr = $(".zone-edition").text().split('\n');
+			
+			for (var i = 0; i < arr.length; i++){
+				
+				if(i < 4){
+					
+					stop = false;
+					
+				}else if(i == 4){
+					
+					stop= true;
+				}
+			}
+			
+			if(stop){
+				console.log("stop");
+				var str = $(".zone-edition").text(),
+					newStr = substring(0, str.length - 1);
+					$(".zone-edition").text(newStr);
+					$(this).val(newStr);
+
+			}*/
+			
+		})
+	},
+	
+	setFontSize: function(){
+		
+		var size = $("#tailleTypo").val();
+		
+		$('.zone-edition').wrap('<span class="font-size" />');
+		$(".font-size").css({"font-size":size+"px", "line-height": size+"px"});
+
+		$("#tailleTypo").change(function(){
+			
+			var newSize = $("#tailleTypo").val();
+			
+			$(".font-size").css({"font-size":newSize+"px", "line-height": newSize+"px"});	
+		});	
+		
+	}
 };
 
 
@@ -75,7 +151,7 @@ tp1.ajaxConfiguration = {
 			      success: function(data){
 			          //alert("success");
 			         //$("#result").html('submitted successfully');
-					console.log(data);
+					
 					
 			      },
 			      error:function(){
@@ -102,7 +178,6 @@ tp1.ajaxConfiguration = {
 			adresse= $("#adresse").val(),
 			valeurs= { grandeur:grandeur,texte:texte,couleur:couleur,tailleCaractere:tailleCaractere,police:police, quantite: quantite, tissu:tissu,nom:nom, prenom:prenom,telephone:telephone, courriel:courriel,adresse :adresse};
 			//alert(police);
-		 	console.log(valeurs);
 
 		//return valeurs;
 	}
